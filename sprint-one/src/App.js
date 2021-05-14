@@ -48,7 +48,7 @@ class App extends React.Component {
       <div>
         <Header />
         <HeroVideo />
-        <HeroAbout />
+        <HeroAbout heroAboutDetails ={this.state.heroVideo}/>
       </div>
     );
   }
