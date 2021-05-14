@@ -1,0 +1,11 @@
+.herovideo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__video{
+        display: flex;
+        justify-content: center;
+        height: 360px;
+    }
+}
