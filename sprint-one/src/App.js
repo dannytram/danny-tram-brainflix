@@ -3,6 +3,7 @@ import "./styles/main.css";
 import Header from "./components/Header";
 import HeroVideo from "./components/HeroVideo";
 import HeroAbout from "./components/HeroAbout";
+import CommentSection from "./components/CommentSection"
 
 class App extends React.Component {
 
@@ -49,6 +50,7 @@ class App extends React.Component {
         <Header />
         <HeroVideo />
         <HeroAbout heroAboutDetails ={this.state.heroVideo}/>
+        <CommentSection commentSectionComments ={this.state.heroVideo.comments}/>
       </div>
     );
   }

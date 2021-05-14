@@ -1,0 +1,13 @@
+.commentsection{
+
+    display: flex;
+
+    &__profilepic{
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+    }
+}
