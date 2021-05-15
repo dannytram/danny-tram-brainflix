@@ -1,5 +1,4 @@
 import React from "react";
-import { v4 as uuidv4 } from 'uuid';
 import "./styles/main.css";
 import videos from "./data/videos.json";
 import Header from "./components/Header";
@@ -14,7 +13,7 @@ class App extends React.Component {
   state = {
     videos,
     heroVideo: {
-    id: uuidv4(),
+    id: "1af0jruup5gu",
     title: "BMX Rampage: 2018 Highlights",
     channel: "Red Cow",
     image: "https://i.imgur.com/l2Xfgpl.jpg",
