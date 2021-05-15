@@ -1,13 +1,17 @@
 import React from "react";
 import "./styles/main.css";
+import videos from "./data/videos.json"
 import Header from "./components/Header";
 import HeroVideo from "./components/HeroVideo";
 import HeroAbout from "./components/HeroAbout";
 import CommentSection from "./components/CommentSection"
+import CommentsPosted from "./components/CommentsPosted"
+import VideoList from "./components/VideoList"
 
 class App extends React.Component {
 
   state = {
+    videos, 
     heroVideo: {
     id: "1af0jruup5gu",
     title: "BMX Rampage: 2018 Highlights",
@@ -51,6 +55,8 @@ class App extends React.Component {
         <HeroVideo />
         <HeroAbout heroAboutDetails ={this.state.heroVideo}/>
         <CommentSection commentSectionComments ={this.state.heroVideo.comments}/>
+        <CommentsPosted commentSectionComments ={this.state.heroVideo.comments}/>
+        <VideoList  videos ={this.state.videos}/>
       </div>
     );
   }
