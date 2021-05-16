@@ -1,11 +1,12 @@
 .herovideo{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     &__video{
-        display: flex;
-        justify-content: center;
-        height: 360px;
+    object-fit: inherit;
+    max-width: $tablet-breakpoint - 1px;
+    width: 100%;
     }
 }

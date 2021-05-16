@@ -1,6 +1,20 @@
 .commentsection{
 
     display: flex;
+    flex-direction: column;
+
+    &__count{
+        font-family: "Avenir Demi";
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__add-comment{
+        display: flex;
+        flex-direction: row;
+        padding-left: 1rem;
+    }
 
     &__profilepic{
         display: inline-block;
@@ -9,5 +23,28 @@
         height: 3rem;
         width: 3rem;
         border-radius: 50%;
+    }
+
+    &__form{
+        font-family: "Avenir Demi";
+        padding-left: 2.5rem;
+    }
+
+    &__form-label{
+        font-family: "Avenir Demi";
+    }
+
+    &__text-area{
+        height: 7rem;
+        width: 90%;
+        font-size: 0.8rem;
+        padding-bottom: 4.25rem;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+        border-style: solid;
+        border-color: #e1e1e1;
+        border-width: 1px;
+        background-color: #fafafa;
     }
 }

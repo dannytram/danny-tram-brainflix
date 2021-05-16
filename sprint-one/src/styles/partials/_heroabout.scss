@@ -1,0 +1,64 @@
+.heroabout{
+
+    &__title{
+        font-family: "Avenir Bold";
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    &__info{
+        display: flex;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__channel{
+        font-family: "Avenir Bold";
+    }
+
+    &__timestamp{
+        font-family: "Avenir Regular";
+        padding-left: 1rem;
+        color: $silver;
+    }
+
+    &__counters{
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+    }
+
+    &__views-img{
+        padding-left: 1rem;
+    }
+
+    &__views-counter{
+        font-family: "Avenir Regular";
+        padding-left: 1rem;
+    }
+
+    &__likes-img{
+        padding-left: 1.25rem;
+    }
+
+    &__likes-counter{
+        font-family: "Avenir Regular";
+        padding-left: 1rem;
+    }
+
+    &__divider{
+        border-bottom: 2px solid $mercury;
+        margin-left: 1rem;
+        padding-bottom: 2rem;
+        width: 90%;
+    }
+
+    &__description{
+        font-family: "Avenir Regular";
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

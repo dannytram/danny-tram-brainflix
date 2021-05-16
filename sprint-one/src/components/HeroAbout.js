@@ -7,16 +7,17 @@ function HeroAbout(props) {
         <div className="heroabout">
             <h2 className="heroabout__title"> {props.heroAboutDetails.title} </h2>
             <div className="heroabout__info">
-                <h3 className="heroabout__channel"> {props.heroAboutDetails.channel} </h3>
+                <h3 className="heroabout__channel"> By {props.heroAboutDetails.channel} </h3>
                 <h3 className="heroabout__timestamp"> {props.heroAboutDetails.timestamp} </h3>
             </div>
-            <div className="heroabout_counters">
+            <div className="heroabout__counters">
                 <img className= "heroabout__views-img" src = {views} alt = "Views"></img>
                 <h3 className="heroabout__views-counter"> {props.heroAboutDetails.views} </h3>
                 <img className= "heroabout__likes-img" src = {likes} alt = "Likes"></img>
                 <h3 className="heroabout__likes-counter"> {props.heroAboutDetails.likes} </h3>
             </div>
-            <p className="heroabout_description">{props.heroAboutDetails.description}</p>
+            <p className="heroabout__divider"> </p>
+            <p className="heroabout__description">{props.heroAboutDetails.description}</p>
         </div>
     )
 }

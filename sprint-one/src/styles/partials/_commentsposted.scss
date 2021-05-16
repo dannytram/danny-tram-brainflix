@@ -1,0 +1,46 @@
+.comments-posted{
+
+    &__list{
+        list-style: none;
+    }
+
+    &__post{
+        line-height: 1.75rem;
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    &__profilepic{
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: lightgrey;
+        border-radius: 50%;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    &__user{
+        font-family: "Avenir Demi";
+        color: #323232;
+        font-size: 1rem;
+    }
+
+    &__date{
+        font-family: "Avenir Demi";
+        color: #AFAFAF;
+        margin-left: auto;
+        padding-right: 1rem;
+    }
+
+    &__comment{
+        font-family: "Avenir Regular";
+        font-weight: 100;
+        flex-basis: 100%;
+        color: #323232;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}

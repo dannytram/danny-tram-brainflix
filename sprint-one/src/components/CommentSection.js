@@ -14,12 +14,12 @@ function CommentSection(props) {
                         src={profilepic}
                         alt="Mystery Man Mohan's Profile"
                     ></img>
-                    <form className="commentsection_form">
+                    <form className="commentsection__form">
                         <label className="commentsection__form-label">
                             JOIN THE CONVERSATION
             </label>
                         <textarea
-                            className="commentsection__textarea"
+                            className="commentsection__text-area"
                             name="commentsection"
                             placeholder="That was easily the most spectacular BMX moment ever."
                         ></textarea>
