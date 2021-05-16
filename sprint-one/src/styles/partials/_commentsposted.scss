@@ -10,6 +10,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        border-top: 2px solid $mercury;
+        margin-left: 1rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        width: 90%;
 
     }
 
@@ -29,7 +34,7 @@
     }
 
     &__date{
-        font-family: "Avenir Demi";
+        font-family: "Avenir Thin";
         color: #AFAFAF;
         margin-left: auto;
         padding-right: 1rem;

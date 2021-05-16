@@ -6,6 +6,7 @@
         padding-left: 1rem;
         padding-bottom: 1rem;
         font-size: 2rem;
+        opacity: 80%;
     }
 
     &__info{
@@ -16,10 +17,11 @@
 
     &__channel{
         font-family: "Avenir Bold";
+        opacity: 80%;
     }
 
     &__timestamp{
-        font-family: "Avenir Regular";
+        font-family: "Avenir Thin";
         padding-left: 1rem;
         color: $silver;
     }
@@ -31,20 +33,22 @@
     }
 
     &__views-img{
+        min-width: 2.5rem;
         padding-left: 1rem;
     }
 
     &__views-counter{
-        font-family: "Avenir Regular";
+        font-family: "Avenir Thin";
         padding-left: 1rem;
     }
 
     &__likes-img{
+        min-width: 2.5rem;
         padding-left: 1.25rem;
     }
 
     &__likes-counter{
-        font-family: "Avenir Regular";
+        font-family: "Avenir Thin";
         padding-left: 1rem;
     }
 
@@ -60,5 +64,6 @@
         padding-top: 2rem;
         padding-left: 1rem;
         padding-right: 1rem;
+        line-height: 1.25rem;
     }
 }

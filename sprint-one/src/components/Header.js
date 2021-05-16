@@ -1,5 +1,6 @@
 import logo from "../assets/images/Logo-brainflix.svg";
 import profilepic from "../assets/images/Mohan-muruge.jpg";
+import upload from "../assets/images/Icon-upload.svg";
 
 function Header() {
   return (
@@ -16,10 +17,10 @@ function Header() {
             placeholder="Search"
           ></input>
         </form>
-        <div className="navbar">
+        <div className="header__navbar">
           <button className="header__btn" type="submit">
-            {" "}
-            Upload
+            <img className="header__btn-upload" src={upload} alt="Upload Your Video" />
+            UPLOAD
           </button>
           <img
             className="header__profilepic"
