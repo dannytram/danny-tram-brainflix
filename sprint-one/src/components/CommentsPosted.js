@@ -16,6 +16,7 @@ function CommentsPosted(props) {
                         </div>
                     </li>
                 ))}
+         <p className='comments-posted__divider'> </p>
         </ul>
     )
 }

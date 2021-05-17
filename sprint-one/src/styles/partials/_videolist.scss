@@ -1,8 +1,12 @@
 .video-list{
     padding-top: 3rem;
+    @include tablet{
+        max-width: 50%;
+    }
 
     &__next{
         font-family: "Avenir Demi";
+        font-size: 1rem;
         color: $silver;
         padding-left: 1rem;
         padding-bottom: 3rem;
