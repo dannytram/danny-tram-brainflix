@@ -2,6 +2,9 @@
     &__list {
       list-style: none;
     }
+    @include desktop{
+      max-width: 60rem;
+    }
   
     &__post {
       line-height: 1.75rem;

@@ -1,6 +1,9 @@
 .commentsection {
   display: flex;
   flex-direction: column;
+  @include desktop{
+    max-width: 60rem;
+  }
 
   &__count {
     font-family: 'Avenir Demi';
@@ -39,7 +42,6 @@
   &__form {
     font-family: 'Avenir Demi';
     padding-left: 2.5rem;
-    
   }
 
   &__form-label {
@@ -77,6 +79,9 @@
     @include tablet{
       padding-left: 3rem;
       padding-top: 2rem;
+    }
+    @include desktop{
+      padding-left: 20rem;
     }
   }
 

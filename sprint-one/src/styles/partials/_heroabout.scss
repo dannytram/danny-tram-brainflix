@@ -1,4 +1,7 @@
 .heroabout{
+    @include desktop{
+        max-width: 60rem;
+      }
 
     &__title{
         font-family: "Avenir Bold";

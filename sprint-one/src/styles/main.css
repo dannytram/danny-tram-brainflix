@@ -88,6 +88,11 @@
   width: 100%;
 }
 
+@media screen and (min-width: 1440px) {
+  .heroabout {
+    max-width: 60rem;
+  }
+}
 .heroabout__title {
   font-family: "Avenir Bold";
   padding-top: 2rem;
@@ -178,6 +183,11 @@
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1440px) {
+  .commentsection {
+    max-width: 60rem;
+  }
+}
 .commentsection__count {
   font-family: "Avenir Demi";
   opacity: 80%;
@@ -253,6 +263,11 @@
     padding-top: 2rem;
   }
 }
+@media screen and (min-width: 1440px) {
+  .commentsection__btn-wrapper {
+    padding-left: 20rem;
+  }
+}
 .commentsection__btn {
   font-family: "Avenir Regular";
   font-size: 1rem;
@@ -272,6 +287,11 @@
 
 .comments-posted__list {
   list-style: none;
+}
+@media screen and (min-width: 1440px) {
+  .comments-posted {
+    max-width: 60rem;
+  }
 }
 .comments-posted__post {
   line-height: 1.75rem;
@@ -339,6 +359,13 @@
     max-width: 50%;
   }
 }
+@media screen and (min-width: 1440px) {
+  .video-list {
+    max-width: 50%;
+    padding-right: 5rem;
+    border-left: 3px solid #E1E1E1;
+  }
+}
 .video-list__next {
   font-family: "Avenir Demi";
   font-size: 1rem;
@@ -384,4 +411,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 1440px) {
+  .desktop-wrapper {
+    display: flex;
+  }
 }/*# sourceMappingURL=main.css.map */
