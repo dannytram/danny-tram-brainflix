@@ -5,6 +5,9 @@
     @include desktop{
       max-width: 60rem;
     }
+    @include desktop{
+      padding-left: 5rem;
+    }
   
     &__post {
       line-height: 1.75rem;

@@ -1,7 +1,10 @@
 .heroabout{
     @include desktop{
         max-width: 60rem;
-      }
+    }
+    @include desktop{
+        padding-left: 5rem;
+    }
 
     &__title{
         font-family: "Avenir Bold";

@@ -25,12 +25,47 @@
   align-items: center;
   padding: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .header__wrapper {
+    max-width: 1439px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0rem;
+  }
+}
 .header__logo {
   width: 8rem;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__logo {
+    width: 15rem;
+    padding-left: 5rem;
+  }
+}
 .header__form {
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .header__form {
+    margin-left: 8rem;
+    padding-top: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-left: 20rem;
+  }
 }
 .header__searchbar {
   width: 100%;
@@ -45,10 +80,28 @@
   margin-bottom: 12px;
   background-color: #FAFAFA;
 }
+@media screen and (min-width: 768px) {
+  .header__searchbar {
+    width: 15rem;
+    height: 3.5rem;
+  }
+}
 .header__navbar {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .header__navbar {
+    justify-content: baseline;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 .header__btn {
   font-family: "Avenir Regular";
@@ -61,6 +114,11 @@
   border-radius: 0.5rem;
   background-color: #0095FF;
   color: white;
+}
+@media screen and (min-width: 768px) {
+  .header__btn {
+    width: 8rem;
+  }
 }
 .header__btn-upload {
   padding-right: 1rem;
@@ -91,6 +149,11 @@
 @media screen and (min-width: 1440px) {
   .heroabout {
     max-width: 60rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .heroabout {
+    padding-left: 5rem;
   }
 }
 .heroabout__title {
@@ -188,6 +251,11 @@
     max-width: 60rem;
   }
 }
+@media screen and (min-width: 1440px) {
+  .commentsection {
+    padding-left: 5rem;
+  }
+}
 .commentsection__count {
   font-family: "Avenir Demi";
   opacity: 80%;
@@ -250,6 +318,12 @@
     width: 100%;
   }
 }
+@media screen and (min-width: 1440px) {
+  .commentsection__text-area {
+    max-height: 2rem;
+    width: 15rem;
+  }
+}
 .commentsection__btn-wrapper {
   display: flex;
   flex-direction: row;
@@ -265,7 +339,7 @@
 }
 @media screen and (min-width: 1440px) {
   .commentsection__btn-wrapper {
-    padding-left: 20rem;
+    padding-left: 10rem;
   }
 }
 .commentsection__btn {
@@ -291,6 +365,11 @@
 @media screen and (min-width: 1440px) {
   .comments-posted {
     max-width: 60rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .comments-posted {
+    padding-left: 5rem;
   }
 }
 .comments-posted__post {

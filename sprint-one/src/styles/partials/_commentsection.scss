@@ -4,6 +4,9 @@
   @include desktop{
     max-width: 60rem;
   }
+  @include desktop{
+    padding-left: 5rem;
+  }
 
   &__count {
     font-family: 'Avenir Demi';
@@ -68,6 +71,10 @@
       max-height: 1rem;
       width: 100%;
     }
+    @include desktop{
+      max-height: 2rem;
+      width: 15rem;
+    }
   }
 
   &__btn-wrapper {
@@ -81,7 +88,7 @@
       padding-top: 2rem;
     }
     @include desktop{
-      padding-left: 20rem;
+      padding-left: 10rem;
     }
   }
 
