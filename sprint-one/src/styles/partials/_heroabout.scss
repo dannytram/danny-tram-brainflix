@@ -95,5 +95,10 @@
             padding-right: 15rem;
             line-height: 1.7rem;
         }
+        @include desktop{
+            padding-right: 8rem;
+            padding-bottom: 2rem;
+            line-height: 1.5rem;
+        }
     }
 }

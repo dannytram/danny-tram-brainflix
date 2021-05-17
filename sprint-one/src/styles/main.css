@@ -241,6 +241,13 @@
     line-height: 1.7rem;
   }
 }
+@media screen and (min-width: 1440px) {
+  .heroabout__description {
+    padding-right: 8rem;
+    padding-bottom: 2rem;
+    line-height: 1.5rem;
+  }
+}
 
 .commentsection {
   display: flex;
