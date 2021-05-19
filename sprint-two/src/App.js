@@ -7,6 +7,9 @@ import CommentSection from "./components/CommentSection";
 import CommentsPosted from "./components/CommentsPosted";
 import VideoList from "./components/VideoList";
 import videos from "./data/video-details.json";
+import UploadPage from "./pages/UploadPage/UploadPage";
+import HomePage from "./pages/HomePage/HomePage";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
   state = {
@@ -62,24 +65,32 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
-        <HeroVideo heroVideoThumbnail={this.state.heroVideo.image} />
-        <div className = "desktop-wrapper">
-          <div>
-            <HeroAbout heroAboutDetails={this.state.heroVideo} />
-            <CommentSection
-              commentSectionComments={this.state.heroVideo.comments}
-            />
-            <CommentsPosted
-              commentSectionComments={this.state.heroVideo.comments}
-            />
-          </div>
-          <VideoList
-            videos={this.state.videos}
-            handleClick={this.updatedVideoHandler}
-            currentVideo={this.state.heroVideo.id}
-          />
-        </div>
+        <BrowserRouter>
+          <Header />
+          <Switch>
+            <div class="homepage">
+              <Route path="/" component={HomePage} exact/>
+              <HeroVideo heroVideoThumbnail={this.state.heroVideo.image} />
+              <div className="desktop-wrapper">
+                <div>
+                  <HeroAbout heroAboutDetails={this.state.heroVideo} />
+                  <CommentSection
+                    commentSectionComments={this.state.heroVideo.comments}
+                  />
+                  <CommentsPosted
+                    commentSectionComments={this.state.heroVideo.comments}
+                  />
+                </div>
+                <VideoList
+                  videos={this.state.videos}
+                  handleClick={this.updatedVideoHandler}
+                  currentVideo={this.state.heroVideo.id}
+                />
+              </div>
+            </div>
+            <Route path="/upload" component={UploadPage} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
