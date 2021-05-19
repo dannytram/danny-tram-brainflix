@@ -1,12 +1,13 @@
 @import "./partials/_variables", 
 "./partials/_mixins",
-"./partials/typography", 
+"./partials/_typography", 
 "./partials/_header", 
-"./partials/herovideo", 
-"./partials/heroabout", 
-"./partials/commentsection",
-"./partials/commentsposted",
-"./partials/videolist";
+"./partials/_herovideo", 
+"./partials/_heroabout", 
+"./partials/_commentsection",
+"./partials/_commentsposted",
+"./partials/_videolist",
+"./partials/_upload";
 
 * {
     margin: 0;
