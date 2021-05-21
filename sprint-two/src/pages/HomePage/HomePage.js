@@ -13,27 +13,55 @@ const API_KEY = "9d207241-4afe-4442-be9c-7331ebf2ea3b"
 
 class HomePage extends React.Component {
     state = {
-        videos,
+        videos: [],
         heroVideo: {},
     }
 
-    componentDidMount(id) {
+    heroVideoHandler(id) {
         axios
             .get(`${API_URL}/videos/${id}?api_key=" + ${API_KEY}`)
-            .then(Response => {
+            .then((response) => {
                 this.setState({
-                    heroVideo: Response.data
+                    heroVideo: response.data
+                })
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }
+
+    videosHandler() {
+        axios
+            .get(`${API_URL}/videos?api_key=" + ${API_KEY}`)
+            .then((response) => {
+                this.setState({
+                    videos: response.data
                 })
             })
     }
 
-    updatedVideoHandler = (id) => {
-        let updatedVideo = this.state.videos.find((video) => video.id === id);
+    componentDidMount(){
+        this.heroVideoHandler()
+        this.videosHandler()
 
         this.setState({
-            heroVideo: updatedVideo,
-        });
-    };
+            videos: response.data,
+          });
+    
+          const videoId = this.props.match.params.videoId || response.data[0].id;
+          this.getSelectedVideo(videoId);
+        };
+
+
+    componentDidUpdate() {
+        if (this.props.match.id && this.state.heroVideo.id !== this.props.match.id) {
+            this.heroVideoHandle(this.props.match.id)
+        }
+    }
+
+
+    // updatedVideoHandler = (id) => {
+    //     let updatedVideo = this.state.videos.find((video) => video.id === id);
     render() {
         return (
             <div>
@@ -51,7 +79,7 @@ class HomePage extends React.Component {
                         </div>
                         <VideoList
                             videos={this.state.videos}
-                            handleClick={this.updatedVideoHandler}
+                            // handleClick={this.updatedVideoHandler}
                             currentVideo={this.state.heroVideo.id}
                         />
                     </div>
