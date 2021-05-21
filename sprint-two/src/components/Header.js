@@ -1,14 +1,15 @@
 import logo from '../assets/images/Logo-brainflix.svg'
 import profilepic from '../assets/images/Mohan-muruge.jpg'
 import upload from '../assets/images/Icon-upload.svg'
+import { Link } from "react-router-dom"
 
 function Header() {
   return (
     <header className='header'>
       <div className='header__wrapper'>
-        <a href='../../public/index.html'>
+        <Link to="/">
           <img className='header__logo' src={logo} alt='Brainflix Home'></img>
-        </a>
+        </Link>
         <form className='header__form'>
           <input
             className='header__searchbar'
@@ -18,6 +19,7 @@ function Header() {
           ></input>
         </form>
         <div className='header__navbar'>
+          <Link to="/upload">
           <button className='header__btn' type='submit'>
             <img
               className='header__btn-upload'
@@ -26,6 +28,7 @@ function Header() {
             />
             UPLOAD
           </button>
+          </Link>
           <img
             className='header__profilepic'
             src={profilepic}
