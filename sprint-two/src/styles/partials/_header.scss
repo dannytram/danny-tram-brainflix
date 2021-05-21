@@ -2,9 +2,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    @include tablet{
-      
-    }
   
     &__wrapper {
       display: flex;
@@ -16,6 +13,13 @@
         flex-direction: row;
         justify-content: space-between;
         padding-bottom: 0rem;
+      }
+      @include desktop{
+        max-width: 1439px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 0rem;
+        
       }
     }
   
@@ -43,7 +47,7 @@
         flex-direction: row;
         align-items: flex-end;
         justify-content: flex-end;
-        margin-left: 20rem;
+        margin-left: 34rem;
       }
     }
   
@@ -63,7 +67,12 @@
         width: 15rem;
         height: 3.5rem;
       }
+      @include desktop{
+        width: 20rem;
+        height: 3.5rem;
+      }
     }
+
   
     &__navbar {
       display: flex;

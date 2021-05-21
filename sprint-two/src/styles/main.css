@@ -33,6 +33,14 @@
     padding-bottom: 0rem;
   }
 }
+@media screen and (min-width: 1440px) {
+  .header__wrapper {
+    max-width: 1439px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0rem;
+  }
+}
 .header__logo {
   width: 8rem;
   padding-bottom: 1rem;
@@ -64,7 +72,7 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-end;
-    margin-left: 20rem;
+    margin-left: 34rem;
   }
 }
 .header__searchbar {
@@ -83,6 +91,12 @@
 @media screen and (min-width: 768px) {
   .header__searchbar {
     width: 15rem;
+    height: 3.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__searchbar {
+    width: 20rem;
     height: 3.5rem;
   }
 }
@@ -499,6 +513,12 @@
   padding: 1rem;
   width: 100%;
 }
+@media screen and (min-width: 1440px) {
+  .upload-page {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
 .upload-page__title {
   font-family: "Avenir Bold";
   font-size: 2rem;
@@ -506,18 +526,56 @@
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .upload-page__title {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .upload-page__divider {
+    border-bottom: 2px solid #E1E1E1;
+    padding-top: 0.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .upload-page__desktop-wrapper {
+    display: flex;
+  }
+}
 .upload-page__thumbnail {
   width: 100%;
   padding-bottom: 2rem;
+}
+@media screen and (min-width: 1440px) {
+  .upload-page__thumbnail {
+    max-width: 50%;
+    margin-right: 0rem;
+  }
 }
 .upload-page__thumbnail-title {
   font-family: "Avenir Demi";
   font-size: 1rem;
   color: #AFAFAF;
 }
+@media screen and (min-width: 768px) {
+  .upload-page__thumbnail-title {
+    padding-top: 3rem;
+    padding-bottom: 0.5rem;
+  }
+}
 .upload-page__thumbnail-img {
   max-width: 100%;
   border-radius: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .upload-page__thumbnail-img {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .upload-page__thumbnail-img {
+    max-width: 100%;
+  }
 }
 .upload-page__form {
   padding-bottom: 2rem;
@@ -526,6 +584,12 @@
   font-family: "Avenir Demi";
   font-size: 1rem;
   color: #AFAFAF;
+}
+@media screen and (min-width: 1440px) {
+  .upload-page__video-title {
+    margin-top: 3rem;
+    margin-right: 30rem;
+  }
 }
 .upload-page__video-title-form {
   width: 100%;
@@ -539,6 +603,16 @@
   font-family: "Avenir Regular";
   font-size: 1.25rem;
   color: black;
+}
+@media screen and (min-width: 768px) {
+  .upload-page__video-title-form {
+    padding: 18px 20px 12px 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .upload-page__video-title-form {
+    margin-top: 1rem;
+  }
 }
 .upload-page__video-description {
   font-family: "Avenir Demi";
@@ -559,6 +633,18 @@
   font-size: 1.25rem;
   color: black;
 }
+@media screen and (min-width: 768px) {
+  .upload-page__video-description-form {
+    padding: 18px 20px 12px 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .upload-page__btn-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 3rem;
+  }
+}
 .upload-page__publish-btn {
   font-family: "Avenir Demi";
   font-size: 1rem;
@@ -571,6 +657,14 @@
   background-color: #0095FF;
   color: white;
 }
+@media screen and (min-width: 768px) {
+  .upload-page__publish-btn {
+    font-size: 1.25rem;
+    height: 4rem;
+    width: 13rem;
+    margin-right: 0rem;
+  }
+}
 .upload-page__cancel-btn {
   font-family: "Avenir Demi";
   font-size: 1rem;
@@ -582,6 +676,14 @@
   border-radius: 0.5rem;
   background-color: white;
   color: #0095FF;
+}
+@media screen and (min-width: 768px) {
+  .upload-page__cancel-btn {
+    font-size: 1.25rem;
+    height: 4rem;
+    width: 13rem;
+    margin-right: 0rem;
+  }
 }
 
 * {
