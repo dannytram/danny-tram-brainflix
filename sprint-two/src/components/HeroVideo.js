@@ -1,3 +1,4 @@
+import React from 'react'
 import video from '../assets/videos/brainflix-sample-video.mp4'
 
 function HeroVideo(props) {

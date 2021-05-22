@@ -5,7 +5,6 @@ import HeroAbout from "../../components/HeroAbout";
 import CommentSection from "../../components/CommentSection";
 import CommentsPosted from "../../components/CommentsPosted";
 import VideoList from "../../components/VideoList";
-import videos from "../../data/video-details.json";
 import axios from "axios"
 
 const API_URL = "https://project-2-api.herokuapp.com";
@@ -17,12 +16,31 @@ class HomePage extends React.Component {
         heroVideo: {},
     }
 
-    heroVideoHandler(id) {
+    componentDidMount() {
         axios
-            .get(`${API_URL}/videos/${id}?api_key=" + ${API_KEY}`)
+            .get(`${API_URL}/videos?api_key=${API_KEY}`)
             .then((response) => {
                 this.setState({
-                    heroVideo: response.data
+                    videos: response.data
+                })
+
+                const videoId = this.props.match.params.videoId || response.data[0].id;
+                this.updatedVideoHandler(videoId);
+            });
+    }
+
+    componentDidUpdate() {
+        const { params } = this.props.match
+        if (params.id && this.state.mainVideo.id !== params.id) {
+            this.heroVideo(params.id)
+        }
+    }
+    updatedVideoHandler = (videoId) => {
+        axios
+            .get(`${API_URL}/videos/${videoId}?api_key=${API_KEY}`)
+            .then((response) => {
+                this.setState({
+                    updatedVideo: response.data
                 })
             })
             .catch((error) => {
@@ -30,38 +48,6 @@ class HomePage extends React.Component {
             })
     }
 
-    videosHandler() {
-        axios
-            .get(`${API_URL}/videos?api_key=" + ${API_KEY}`)
-            .then((response) => {
-                this.setState({
-                    videos: response.data
-                })
-            })
-    }
-
-    componentDidMount(){
-        this.heroVideoHandler()
-        this.videosHandler()
-
-        this.setState({
-            videos: response.data,
-          });
-    
-          const videoId = this.props.match.params.videoId || response.data[0].id;
-          this.getSelectedVideo(videoId);
-        };
-
-
-    componentDidUpdate() {
-        if (this.props.match.id && this.state.heroVideo.id !== this.props.match.id) {
-            this.heroVideoHandle(this.props.match.id)
-        }
-    }
-
-
-    // updatedVideoHandler = (id) => {
-    //     let updatedVideo = this.state.videos.find((video) => video.id === id);
     render() {
         return (
             <div>
@@ -79,15 +65,58 @@ class HomePage extends React.Component {
                         </div>
                         <VideoList
                             videos={this.state.videos}
-                            // handleClick={this.updatedVideoHandler}
                             currentVideo={this.state.heroVideo.id}
                         />
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
 export default HomePage;
+
+
+
+    //     heroVideoHandler(id) {
+    //         axios
+    //             .get(`${API_URL}/videos/${id}?api_key=" + ${API_KEY}`)
+    //             .then((response) => {
+    //                 this.setState({
+    //                     heroVideo: response.data
+    //                 })
+    //             })
+    //             .catch((error) => {
+    //                 console.log(error)
+    //             })
+    //     }
+
+    //     videosHandler() {
+    //         axios
+    //             .get(`${API_URL}/videos?api_key=" + ${API_KEY}`)
+    //             .then((response) => {
+    //                 this.setState({
+    //                     videos: response.data
+    //                 })
+    //             })
+    //     }
+
+    //     componentDidMount(){
+    //         this.heroVideoHandler()
+    //         this.videosHandler()
+
+    //     this.setState({
+    //         videos: response.data,
+    //       });
+
+    //       const videoId = this.props.match.params.videoId || response.data[0].id;
+    //       this.getSelectedVideo(videoId);
+    // };
+
+
+    // componentDidUpdate() {
+    //     if (this.props.match.id && this.state.heroVideo.id !== this.props.match.id) {
+    //         this.heroVideoHandle(this.props.match.id)
+    //     }
+    // }
 
