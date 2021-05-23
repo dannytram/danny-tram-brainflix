@@ -14,33 +14,47 @@ class HomePage extends React.Component {
     state = {
         videos: [],
         heroVideo: {},
-    }
+    };
+    
 
     componentDidMount() {
+        this.getHeroVideo("1af0jruup5gu")
         axios
             .get(`${API_URL}/videos?api_key=${API_KEY}`)
             .then((response) => {
+
                 this.setState({
                     videos: response.data
                 })
-
-                const videoId = this.props.match.params.videoId || response.data[0].id;
-                this.updatedVideoHandler(videoId);
-            });
+            })
     }
 
     componentDidUpdate() {
+        // if (prevProps.match != this.props.match){
+        //     axios
+        //     .get(`${API_URL}/videos/${this.props.match.params.id}?api_key=${API_KEY}`)
+        //     .then(response => {
+        //         const heroVideo = response.data;
+        //         let videos = this.state.videos.filter(
+        //             video => video.id !== this.props.match.params.id
+        //         );
+        //         this.setState({videos, heroVideo: [heroVideo]})
+        //     })
+        // }
         const { params } = this.props.match
-        if (params.id && this.state.mainVideo.id !== params.id) {
-            this.heroVideo(params.id)
+        if (params.id && this.state.heroVideo.id !== params.id) {
+            this.getHeroVideo(params.id)
+        } else if (!params.id){
+            this.getHeroVideo("1af0jruup5gu")
         }
     }
-    updatedVideoHandler = (videoId) => {
+
+    getHeroVideo(videoId) { //heroVideo
         axios
             .get(`${API_URL}/videos/${videoId}?api_key=${API_KEY}`)
             .then((response) => {
                 this.setState({
-                    updatedVideo: response.data
+                    heroVideo: response.data
                 })
             })
             .catch((error) => {
@@ -50,24 +64,24 @@ class HomePage extends React.Component {
 
     render() {
         return (
-            <div>
-                <div class="homepage">
-                    <HeroVideo heroVideoThumbnail={this.state.heroVideo.image} />
-                    <div className="desktop-wrapper">
-                        <div>
-                            <HeroAbout heroAboutDetails={this.state.heroVideo} />
-                            <CommentSection
-                                commentSectionComments={this.state.heroVideo.comments}
-                            />
-                            <CommentsPosted
-                                commentSectionComments={this.state.heroVideo.comments}
-                            />
-                        </div>
-                        <VideoList
-                            videos={this.state.videos}
-                            currentVideo={this.state.heroVideo.id}
+            <div class="homepage">
+                <HeroVideo
+                    heroVideo={this.state.heroVideo.video + `/?api_key=${API_KEY}`}
+                    heroVideoThumbnail={this.state.heroVideo.image} />
+                <div className="desktop-wrapper">
+                    <div>
+                        <HeroAbout heroAboutDetails={this.state.heroVideo} />
+                        <CommentSection
+                            commentSectionComments={this.state.heroVideo.comments}
+                        />
+                        <CommentsPosted
+                            commentSectionComments={this.state.heroVideo.comments}
                         />
                     </div>
+                    <VideoList
+                        videos={this.state.videos}
+                        currentVideo={this.state.heroVideo.id}
+                    />
                 </div>
             </div>
         )
@@ -75,48 +89,3 @@ class HomePage extends React.Component {
 }
 
 export default HomePage;
-
-
-
-    //     heroVideoHandler(id) {
-    //         axios
-    //             .get(`${API_URL}/videos/${id}?api_key=" + ${API_KEY}`)
-    //             .then((response) => {
-    //                 this.setState({
-    //                     heroVideo: response.data
-    //                 })
-    //             })
-    //             .catch((error) => {
-    //                 console.log(error)
-    //             })
-    //     }
-
-    //     videosHandler() {
-    //         axios
-    //             .get(`${API_URL}/videos?api_key=" + ${API_KEY}`)
-    //             .then((response) => {
-    //                 this.setState({
-    //                     videos: response.data
-    //                 })
-    //             })
-    //     }
-
-    //     componentDidMount(){
-    //         this.heroVideoHandler()
-    //         this.videosHandler()
-
-    //     this.setState({
-    //         videos: response.data,
-    //       });
-
-    //       const videoId = this.props.match.params.videoId || response.data[0].id;
-    //       this.getSelectedVideo(videoId);
-    // };
-
-
-    // componentDidUpdate() {
-    //     if (this.props.match.id && this.state.heroVideo.id !== this.props.match.id) {
-    //         this.heroVideoHandle(this.props.match.id)
-    //     }
-    // }
-

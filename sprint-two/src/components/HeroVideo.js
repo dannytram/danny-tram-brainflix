@@ -6,10 +6,10 @@ function HeroVideo(props) {
     <div className='herovideo'>
       <video
         controls
+        src={props.video}
         poster={props.heroVideoThumbnail}
         className='herovideo__video'
       >
-        <source src={video} type='video/mp4' />
       </video>
     </div>
   )
