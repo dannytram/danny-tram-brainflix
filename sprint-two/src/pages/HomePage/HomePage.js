@@ -14,6 +14,7 @@ class HomePage extends React.Component {
     state = {
         videos: [],
         heroVideo: {},
+        videoData: null,
     };
 
     
@@ -48,6 +49,16 @@ class HomePage extends React.Component {
             this.getHeroVideo(this.props.match.params.id)
         }
     }
+
+    getNextVideo = () => {
+        axios
+        .get(`${API_URL}/videos?api_key=${API_KEY}`)
+        .then((result) =>{
+            this.setState({
+                videoData: result.video.id[0]++,
+            });
+        });
+    };
 
     render() {
         return (

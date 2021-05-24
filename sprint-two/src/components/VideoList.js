@@ -1,5 +1,6 @@
-import React from "react"
+import React from "react";
 import VideoListVideo from "./VideoListVideo"
+
 
 function VideoList(props) {
     return (
