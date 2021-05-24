@@ -15,6 +15,20 @@ class HomePage extends React.Component {
         videos: [],
         heroVideo: {},
     };
+
+    
+    getHeroVideo(videoId) {
+        axios
+            .get(`${API_URL}/videos/${videoId}?api_key=${API_KEY}`)
+            .then((response) => {
+                this.setState({
+                    heroVideo: response.data
+                })
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }
     
 
     componentDidMount() {
@@ -29,37 +43,10 @@ class HomePage extends React.Component {
             })
     }
 
-    componentDidUpdate() {
-        // if (prevProps.match != this.props.match){
-        //     axios
-        //     .get(`${API_URL}/videos/${this.props.match.params.id}?api_key=${API_KEY}`)
-        //     .then(response => {
-        //         const heroVideo = response.data;
-        //         let videos = this.state.videos.filter(
-        //             video => video.id !== this.props.match.params.id
-        //         );
-        //         this.setState({videos, heroVideo: [heroVideo]})
-        //     })
-        // }
-        const { params } = this.props.match
-        if (params.id && this.state.heroVideo.id !== params.id) {
-            this.getHeroVideo(params.id)
-        } else if (!params.id){
-            this.getHeroVideo("1af0jruup5gu")
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.id && this.state.heroVideo.id !== prevProps.match.params.id) {
+            this.getHeroVideo(this.props.match.params.id)
         }
-    }
-
-    getHeroVideo(videoId) { //heroVideo
-        axios
-            .get(`${API_URL}/videos/${videoId}?api_key=${API_KEY}`)
-            .then((response) => {
-                this.setState({
-                    heroVideo: response.data
-                })
-            })
-            .catch((error) => {
-                console.log(error)
-            })
     }
 
     render() {

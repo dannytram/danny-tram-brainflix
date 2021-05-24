@@ -13,7 +13,7 @@ class App extends React.Component {
           <Header />
           <Switch>
             <Route path="/" component={HomePage} exact />
-            <Route path="/video:id" component={HomePage} />
+            <Route path="/video/:id" component={HomePage} />
             <Route path="/upload" component={UploadPage} />
           </Switch>
         </BrowserRouter>
