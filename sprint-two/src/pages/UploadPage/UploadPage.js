@@ -1,8 +1,22 @@
 import React from 'react'
 import "../../styles/main.css";
-import preview from '../../assets/images/Upload-video-preview.jpg'
+import preview from "../../assets/images/Upload-video-preview.jpg";
+import history from "../../components/Utility/history";
+import PopUp from "../../components/Utility/PopUp";
+
 
 class UploadPage extends React.Component {
+    state = {
+        seen: false
+    };
+
+    successNotification = () => {
+        this.setState({
+            seen: !this.state.seen
+        });
+    };
+
+
     render() {
         return (
             <div className="upload-page">
@@ -32,7 +46,12 @@ class UploadPage extends React.Component {
                 </div>
                 <div className="upload-page__divider"></div>
                 <div className="upload-page__btn-wrapper">
-                    <button className="upload-page__publish-btn">PUBLISH</button>
+                    <div onClick={this.successNotification}>
+                        <div onClick={() => history.push('/')} >
+                            <button className="upload-page__publish-btn">PUBLISH</button>
+                            {this.state.seen ? <PopUp toggle={this.successNotification} /> : null}
+                        </div>
+                    </div>
                     <button className="upload-page__cancel-btn">CANCEL</button>
                 </div>
             </div>
