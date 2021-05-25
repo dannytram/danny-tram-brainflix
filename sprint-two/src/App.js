@@ -17,10 +17,6 @@ class App extends React.Component {
             <Route path="/" component={HomePage} exact />
             <Route path="/video/:id" component={HomePage} />
             <Route path="/upload" component={UploadPage} />
-            {/* <Switch>
-              <Redirect from="/upload" to ="/"></Redirect>
-              <Route path="/" component={HomePage} exact />
-            </Switch> */}
           </Switch>
         </Router>
         </BrowserRouter>
