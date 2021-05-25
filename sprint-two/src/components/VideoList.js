@@ -5,7 +5,9 @@ import VideoListVideo from "./VideoListVideo"
 function VideoList(props) {
     return (
         <div className="video-list">
-            <h2 className="video-list__next"> NEXT VIDEO</h2>
+            <h2 className="video-list__next" onClick={()=> {
+                props.getNextVideo()
+            }}> NEXT VIDEO</h2>
             <ul className="video-list__results">
                 {props.videos
                     .filter((video) => video.id !== props.currentVideo)

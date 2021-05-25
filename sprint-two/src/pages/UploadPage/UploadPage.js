@@ -46,11 +46,13 @@ class UploadPage extends React.Component {
                 </div>
                 <div className="upload-page__divider"></div>
                 <div className="upload-page__btn-wrapper">
-                    <div onClick={this.successNotification}>
-                        <div onClick={() => history.push('/')} >
-                            <button className="upload-page__publish-btn">PUBLISH</button>
+                    <div>
+                            <button className="upload-page__publish-btn" onClick={() => { 
+                                this.successNotification();
+                                setTimeout( function () {history.push('/')}, 2000);
+                                }}>
+                                    PUBLISH</button>
                             {this.state.seen ? <PopUp toggle={this.successNotification} /> : null}
-                        </div>
                     </div>
                     <button className="upload-page__cancel-btn">CANCEL</button>
                 </div>

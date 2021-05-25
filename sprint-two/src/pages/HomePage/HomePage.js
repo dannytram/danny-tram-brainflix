@@ -14,7 +14,6 @@ class HomePage extends React.Component {
     state = {
         videos: [],
         heroVideo: {},
-        videoData: null,
     };
 
     
@@ -55,8 +54,9 @@ class HomePage extends React.Component {
         .get(`${API_URL}/videos?api_key=${API_KEY}`)
         .then((result) =>{
             this.setState({
-                videoData: result.video.id[0]++,
+                heroVideo: result.data[0]
             });
+            console.log(result)
         });
     };
 
@@ -79,6 +79,7 @@ class HomePage extends React.Component {
                     <VideoList
                         videos={this.state.videos}
                         currentVideo={this.state.heroVideo.id}
+                        getNextVideo={this.getNextVideo}
                     />
                 </div>
             </div>
