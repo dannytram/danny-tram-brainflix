@@ -1,0 +1,22 @@
+@import "./partials/_variables", 
+"./partials/_mixins",
+"./partials/_typography", 
+"./partials/_header", 
+"./partials/_herovideo", 
+"./partials/_heroabout", 
+"./partials/_commentsection",
+"./partials/_commentsposted",
+"./partials/_videolist",
+"./partials/_upload";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.desktop-wrapper{
+    @include desktop{
+    display: flex;
+    }
+}

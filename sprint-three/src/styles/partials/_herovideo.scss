@@ -1,0 +1,13 @@
+.herovideo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+    &__video{
+    object-fit: inherit;
+    max-width: $tablet-breakpoint - 1px;
+    width: 100%;
+    }
+}

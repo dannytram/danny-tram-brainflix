@@ -1,0 +1,168 @@
+.upload-page{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    @include desktop{
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    &__title{
+        font-family: "Avenir Bold";
+        font-size: 2rem;
+        color: #323232;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        @include tablet{
+            font-size: 3rem;
+        }
+    }
+
+    &__divider{
+        @include tablet{
+        border-bottom: 2px solid $mercury;
+        padding-top: 0.5rem;
+        }
+    }
+
+    &__desktop-wrapper{
+        @include desktop{
+            display: flex;
+        }
+    }
+
+    &__thumbnail{
+        width: 100%;
+        padding-bottom: 2rem;
+        @include desktop{
+            max-width: 50%;
+            margin-right: 0rem;
+        }
+    }
+
+    &__thumbnail-title{
+        font-family: "Avenir Demi";
+        font-size: 1rem;
+        color: $silver;
+        @include tablet{
+            padding-top: 3rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+    
+    &__thumbnail-img{
+        max-width: 100%;
+        border-radius: 0.5rem;
+        @include tablet{
+            width: 60%;
+        }
+        @include desktop{
+            max-width: 100%;
+        }
+    }
+
+    &__form{
+        padding-bottom: 2rem;
+    }
+
+    &__video-title{
+        font-family: "Avenir Demi";
+        font-size: 1rem;
+        color: $silver;
+        @include desktop{
+            margin-top: 3rem;
+            margin-right: 30rem;
+        }
+    }
+
+    &__video-title-form{
+        width: 100%;
+        height: 3.5rem;
+        font-size: 16px;
+        padding: 18px 20px 12px 12px;
+        border: 1px solid #ddd;
+        border-radius: 0.25rem;
+        margin-bottom: 12px;
+        background-color: $alabaster;
+        font-family: "Avenir Regular";
+        font-size: 1.25rem;
+        color: black;
+        @include tablet{
+            padding: 18px 20px 12px 20px;
+        }
+        @include desktop{
+        margin-top: 1rem;
+        }
+    }
+
+    &__video-description{
+        font-family: "Avenir Demi";
+        font-size: 1rem;
+        color: $silver;
+        padding-top: 0.5rem;
+    }
+
+    &__video-description-form{
+        width: 100%;
+        height: 9em;
+        font-size: 16px;
+        padding: 20px 20px 12px 12px;
+        border: 1px solid #ddd;
+        border-radius: 0.25rem;
+        margin-bottom: 12px;
+        background-color: $alabaster;
+        font-family: "Avenir Regular";
+        font-size: 1.25rem;
+        color: black;
+        @include tablet{
+            padding: 18px 20px 12px 20px;
+        }
+    }
+
+    &__btn-wrapper{
+        @include tablet{
+            display: flex;
+            flex-direction: row-reverse;
+            padding-top: 3rem;
+        }
+    }
+
+    &__publish-btn{
+        font-family: 'Avenir Demi';
+        font-size: 1rem;
+        font-weight: 500;
+        height: 3.5rem;
+        margin-right: 1rem;
+        width: 100%;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: $brainflix-blue;
+        color: white;
+        @include tablet{
+            font-size: 1.25rem;
+            height: 4rem;
+            width: 13rem;
+            margin-right: 0rem;
+        }
+    }
+
+    &__cancel-btn{
+        font-family: 'Avenir Demi';
+        font-size: 1rem;
+        font-weight: 500;
+        height: 3.5rem;
+        margin-right: 1rem;
+        width: 100%;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: white;
+        color: $brainflix-blue;
+        @include tablet{
+            font-size: 1.25rem;
+            height: 4rem;
+            width: 13rem;
+            margin-right: 0rem;
+        }
+    }
+}
