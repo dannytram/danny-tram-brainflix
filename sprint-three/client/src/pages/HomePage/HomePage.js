@@ -9,6 +9,7 @@ import axios from "axios"
 
 const API_URL = "https://project-2-api.herokuapp.com";
 const API_KEY = "9d207241-4afe-4442-be9c-7331ebf2ea3b"
+const URL = "http://localhost:8080"
 
 class HomePage extends React.Component {
     state = {
@@ -19,7 +20,7 @@ class HomePage extends React.Component {
     
     getHeroVideo(videoId) {
         axios
-            .get(`${API_URL}/videos/${videoId}?api_key=${API_KEY}`)
+            .get(`${URL}/videos/${videoId}`)
             .then((response) => {
                 this.setState({
                     heroVideo: response.data
@@ -36,7 +37,7 @@ class HomePage extends React.Component {
         //what if this heroVideo is deleted or removed,
         //maybe get list and then look for index 0
         axios
-            .get(`${API_URL}/videos?api_key=${API_KEY}`)
+            .get(`${URL}/videos`)
             .then((response) => {
 
                 this.setState({

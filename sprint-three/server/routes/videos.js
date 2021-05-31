@@ -3,9 +3,7 @@ const router = express.Router();
 const cors = require("cors");
 const { v4: uuidv4 } = require("uuid");
 const fs = require('fs')
-const videos = require("../data/videos.json");
 const heroVideo = require("../data/video-details.json");
-const currentHeroVidero = require("../data/video-hero.json");
 const { response } = require("express");
 
 // Configuration
