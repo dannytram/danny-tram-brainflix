@@ -2,26 +2,36 @@ import React from 'react'
 import "../../styles/main.css";
 import preview from "../../assets/images/Upload-video-preview.jpg";
 import history from "../../components/Utility/history";
-import PopUp from "../../components/Utility/PopUp";
+import uploadVideoPreview from "../../assets/images/Upload-video-preview.jpg"
+import axios from "axios"
 
 
-class UploadPage extends React.Component {
-    state = {
-        seen: false
-    };
+function UploadPage() {
 
-    successNotification = () => {
-        this.setState({
-            seen: !this.state.seen
-        });
-    };
+    const uploadVideo = (event) => {
+        event.preventDefault();
+        const newVideo = {
+            "title": event.target.title.value,
+            "channel": "The Greatest Channel Ever",
+            "image": uploadVideoPreview,
+            "description": event.target.description.value,
+        }
+
+        axios
+            .post("http://localhost:8080/videos", newVideo)
+            .then(event.target.reset(), alert("Video Published"))
+            .catch((error) => {
+                console.log(error)
+            })
+    }
 
 
-    render() {
-        return (
-            <div className="upload-page">
-                <h2 className="upload-page__title"> Upload Video</h2>
-                <div className="upload-page__divider"></div>
+
+    return (
+        <div className="upload-page">
+            <h2 className="upload-page__title"> Upload Video</h2>
+            <div className="upload-page__divider"></div>
+            <form className = "upload-page__form" onsubmit = {uploadVideo}>
                 <div className="upload-page__desktop-wrapper">
                     <div className="upload-page__thumbnail">
                         <h3 className="upload-page__thumbnail-title">VIDEO THUMBNAIL</h3>
@@ -31,7 +41,7 @@ class UploadPage extends React.Component {
                             alt="Upload Your Video"
                         />
                     </div>
-                    <div className="upload-page__form">
+                    <div className="upload-page__input">
                         <h3 className="upload-page__video-title">TITLE YOUR VIDEO</h3>
                         <textarea
                             className="upload-page__video-title-form"
@@ -47,18 +57,16 @@ class UploadPage extends React.Component {
                 <div className="upload-page__divider"></div>
                 <div className="upload-page__btn-wrapper">
                     <div>
-                            <button className="upload-page__publish-btn" onClick={() => { 
-                                this.successNotification();
-                                setTimeout(function () {history.push('/')}, 2000);
-                                }}>
-                                    PUBLISH</button>
-                            {this.state.seen ? <PopUp toggle={this.successNotification} /> : null}
+                        <button className="upload-page__publish-btn" onClick={() => {
+                            setTimeout(function () { history.push('/') }, 2000);
+                        }}>
+                            PUBLISH</button>
                     </div>
                     <button className="upload-page__cancel-btn">CANCEL</button>
                 </div>
-            </div>
-        )
-    }
+            </form>
+        </div>
+    )
 }
 
 export default UploadPage
