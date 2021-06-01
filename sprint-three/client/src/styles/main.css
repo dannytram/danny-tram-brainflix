@@ -145,6 +145,10 @@
   width: 3.5rem;
   border-radius: 50%;
 }
+.header__profileimg {
+  height: 4rem;
+  width: 4rem;
+}
 
 .herovideo {
   display: flex;
@@ -308,6 +312,10 @@
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
+}
+.commentsection__profileimg {
+  height: 4rem;
+  width: 5rem;
 }
 .commentsection__form {
   font-family: "Avenir Demi";
@@ -577,7 +585,7 @@
     max-width: 100%;
   }
 }
-.upload-page__form {
+.upload-page__input {
   padding-bottom: 2rem;
 }
 .upload-page__video-title {

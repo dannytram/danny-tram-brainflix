@@ -12,9 +12,9 @@ function HeroAbout(props) {
                     <h3 className='heroabout__timestamp'>{new Date(props.heroAboutDetails.timestamp).toLocaleDateString()}</h3>
                 </div>
                 <div className='heroabout__counters'>
-                    <img className='heroabout__views-img' src={views} alt='Views'></img>
+                    <img className='heroabout__views-img' src={views} alt='Views'/>
                     <h3 className='heroabout__views-counter'>{props.heroAboutDetails.views}</h3>
-                    <img className='heroabout__likes-img' src={likes} alt='Likes'></img>
+                    <img className='heroabout__likes-img' src={likes} alt='Likes'/>
                     <h3 className='heroabout__likes-counter'>{props.heroAboutDetails.likes}</h3>
                 </div>
             </div>

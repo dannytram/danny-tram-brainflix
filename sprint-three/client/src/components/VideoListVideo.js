@@ -6,7 +6,7 @@ function VideoListVideo(props) {
         <Link to={`/video/${props.id}`}>
             <li className='video-list__list' key={props.id}>
                 <div className='video-list__thumbnail'>
-                    <img className='video-list__image' src={props.image} alt={props.title}></img>
+                    <img className='video-list__image' src={props.image} alt={props.title}/>
                 </div>
                 <div className='video-list__headers'>
                     <h3 className='video-list__title'>{props.title}</h3>

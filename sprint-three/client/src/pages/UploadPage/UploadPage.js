@@ -11,7 +11,7 @@ function UploadPage() {
         const title = form.title.value
         const description = form.description.value
 
-        if (title.trim().length !== 0 && description.trim().length !== 0) {
+        if (title.length !== 0 && description.length !== 0) {
             const newVideo = {
                 title: title,
                 description: description,
@@ -33,42 +33,19 @@ function UploadPage() {
                 <div className='upload-page__desktop-wrapper'>
                     <div className='upload-page__thumbnail'>
                         <h3 className='upload-page__thumbnail-title'>VIDEO THUMBNAIL</h3>
-                        <img
-                            className='upload-page__thumbnail-img'
-                            src={preview}
-                            alt='Upload Your Video'
-                        />
+                        <img className='upload-page__thumbnail-img' src={preview} alt='Upload Your Video' />
                     </div>
                     <div className='upload-page__input'>
-                        <h3 className='upload-page__video-title'>TITLE YOUR VIDEO</h3>
-                        <textarea
-                            className='upload-page__video-title-form'
-                            name='title'
-                            placeholder='Add a title to your video'
-                        ></textarea>
-                        <h3 className='upload-page__video-description'>
-                            ADD A VIDEO DESCRIPTION
-            </h3>
-                        <textarea
-                            name='description'
-                            className='upload-page__video-description-form'
-                            placeholder='Add a description of your video'
-                        ></textarea>
+                        <label className='upload-page__video-title'>TITLE YOUR VIDEO</label>
+                        <textarea className='upload-page__video-title-form' name='title' placeholder='Add a title to your video'></textarea>
+                        <label className='upload-page__video-description'>ADD A VIDEO DESCRIPTION </label>
+                        <textarea name='description' className='upload-page__video-description-form' placeholder='Add a description of your video' ></textarea>
                     </div>
                 </div>
                 <div className='upload-page__divider'></div>
                 <div className='upload-page__btn-wrapper'>
                     <div>
-                        <button
-                            className='upload-page__publish-btn'
-                            onClick={() => {
-                                setTimeout(function () {
-                                    history.push('/')
-                                }, 2000)
-                            }}
-                        >
-                            PUBLISH
-            </button>
+                        <button className='upload-page__publish-btn' onClick={() => { setTimeout(function () { history.push('/') }, 2000) }}>PUBLISH</button>
                     </div>
                     <button className='upload-page__cancel-btn'>CANCEL</button>
                 </div>

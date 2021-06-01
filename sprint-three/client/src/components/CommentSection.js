@@ -9,11 +9,13 @@ function CommentSection(props) {
                     {props.commentSectionComments && props.commentSectionComments.length} Comments</h3>
                 <div className='commentsection__wrapper'>
                     <div className='commentsection__add-comment'>
-                        <img
-                            className='header__profilepic'
-                            src={profilepic}
-                            alt="Mystery Man Mohan's Profile"
-                        ></img>
+                        <div className="header__profilepic">
+                            <img
+                                className='header__profileimg'
+                                src={profilepic}
+                                alt="Mystery Man Mohan's Profile"
+                            />
+                        </div>
                         <form className='commentsection__form'>
                             <label className='commentsection__form-label'>
                                 JOIN THE CONVERSATION

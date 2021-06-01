@@ -33,14 +33,19 @@
     }
   }
 
-  &__profilepic {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50%;
-  }
+    &__profilepic {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+    }
+
+    &__profileimg{
+      height: 4rem;
+      width: 5rem;
+    }
 
   &__form {
     font-family: 'Avenir Demi';
