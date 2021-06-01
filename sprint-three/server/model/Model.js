@@ -1,58 +1,49 @@
-const express = require("express");
-const app = express.Router();
-const cors = require("cors");
-const { v4: uuidv4 } = require("uuid");
+const express = require('express')
+const app = express.Router()
+const { v4: uuidv4 } = require('uuid')
 const fs = require('fs')
-const videos = require("../data/videos.json");
-const heroVideo = require("../data/video-details.json");
-const currentHeroVidero = require("../data/video-hero.json");
-const { response } = require("express");
+const path = require('path')
 
-// Configuration
-require('dotenv').config();
-const port = process.env.PORT || 8080;
-
-// Middleware
-app.use(express.json());
-app.use(cors());
+const heroVideo = path.join(__dirname, '../data/video-details.json')
 
 function readVideos() {
-    const data = fs.readFileSync(heroVideo)
-    return JSON.parse(data)
+  const data = fs.readFileSync(heroVideo)
+  return JSON.parse(data)
 }
 
-function writeVideos(data) {
-    const readVideos = readVideos()
-    const video = new Video(data.title, data.description)
-    readVideos.push(video)
-    fs.writeFileSync(heroVideo, JSON.stringify(readVideos))
-    return readVideos
+function writeVideos(body) {
+  const newVideos = readVideos()
+  const video = new Video(body.title, body.description)
+  newVideos.push(video)
+  fs.writeFileSync(heroVideo, JSON.stringify(newVideos))
+  return newVideos
 }
 
 function Video(title, description) {
-    this.id = uuidv4()
-    this.title = title
-    this.channel = ""
-    this.image = ""
-    this.views = "0"
-    this.likes = "0"
-    this.duration = "0:00"
-    this.description = description
-    this.timestamp = Date.now()
+  this.id = uuidv4()
+  this.title = title
+  this.channel = 'The Greatest Channel Ever'
+  this.image =
+    'https://en.meming.world/images/en/thumb/2/2c/Surprised_Pikachu_HD.jpg/300px-Surprised_Pikachu_HD.jpg'
+  this.views = '0'
+  this.likes = '0'
+  this.duration = '7:21'
+  this.description = description
+  this.timestamp = Date.now()
 }
 
 function filterVideos(id) {
-    const readVideos = readVideos()
-    let filteredVideos = readVideos.filter((video) => video.id === id)
-    if (filteredVideos.length) {
-        return filteredVideos.shift()
-    } else {
-        console.log("Video Not Found")
-    }
+  const newVideos = readVideos()
+  let filteredVideos = newVideos.filter((video) => video.id === id)
+  if (filteredVideos.length) {
+    return filteredVideos.shift()
+  } else {
+    console.log('Video Not Found')
+  }
 }
 
 module.exports = {
-    readVideos,
-    writeVideos,
-    filterVideos,
+  readVideos,
+  writeVideos,
+  filterVideos,
 }
