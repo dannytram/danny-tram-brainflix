@@ -1,13 +1,12 @@
 import React from 'react'
 import '../../styles/main.css'
-import HeroVideo from '../../components/HeroVideo'
-import HeroAbout from '../../components/HeroAbout'
-import CommentSection from '../../components/CommentSection'
-import CommentsPosted from '../../components/CommentsPosted'
-import VideoList from '../../components/VideoList'
+import HeroVideo from '../../components/HeroVideo/HeroVideo'
+import HeroAbout from '../../components/HeroAbout/HeroAbout'
+import CommentSection from '../../components/CommentSection/CommentSection'
+import CommentsPosted from '../../components/CommentsPosted/CommentsPosted'
+import VideoList from '../../components/VideoList/VideoList'
 import axios from 'axios'
 
-// const API_URL = "https://project-2-api.herokuapp.com";
 const API_KEY = '9d207241-4afe-4442-be9c-7331ebf2ea3b'
 const URL = 'http://localhost:8080'
 
@@ -32,8 +31,6 @@ class HomePage extends React.Component {
 
     componentDidMount() {
         this.getHeroVideo('1af0jruup5gu')
-        //what if this heroVideo is deleted or removed,
-        //maybe get list and then look for index 0
         axios.get(`${URL}/videos`).then((response) => {
             this.setState({
                 videos: response.data,
@@ -43,23 +40,9 @@ class HomePage extends React.Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.match.params.id !== prevProps.match.params.id) {
-            //if they are different, check if undefined
-            //if undefined get default
-            //if not undefined get new video
             this.getHeroVideo(this.props.match.params.id)
         }
     }
-
-    // getNextVideo = (index) => {
-    //     axios
-    //     .get(`${API_URL}/videos?api_key=${API_KEY}`)
-    //     .then((result) =>{
-    //         this.setState({
-    //             heroVideo: result.data[index] ++
-    //         });
-    //         console.log(result)
-    //     });
-    // };
 
     render() {
         return (

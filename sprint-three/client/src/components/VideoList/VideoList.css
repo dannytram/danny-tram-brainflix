@@ -1,0 +1,55 @@
+.video-list {
+  padding-top: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .video-list {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .video-list {
+    max-width: 50%;
+    padding-right: 5rem;
+    border-left: 3px solid #E1E1E1;
+  }
+}
+.video-list__next {
+  font-family: "Avenir Demi";
+  font-size: 1rem;
+  color: #AFAFAF;
+  padding-left: 1rem;
+  padding-bottom: 3rem;
+}
+.video-list__results {
+  padding-left: 1rem;
+  list-style: none;
+}
+.video-list__list {
+  display: flex;
+  padding-bottom: 2rem;
+}
+.video-list__thumbnail {
+  max-width: 10rem;
+  height: 6rem;
+  overflow: hidden;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+.video-list__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.video-list__headers {
+  padding-left: 1.5rem;
+}
+.video-list__title {
+  font-family: "Avenir Demi";
+  padding-right: 1rem;
+}
+.video-list__channel {
+  font-family: "Avenir Regular";
+  font-weight: 100;
+  font-size: 1rem;
+  padding-top: 1rem;
+}/*# sourceMappingURL=VideoList.css.map */

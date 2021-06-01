@@ -1,0 +1,13 @@
+.herovideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.herovideo__video {
+  -o-object-fit: inherit;
+     object-fit: inherit;
+  max-width: 767px;
+  width: 100%;
+}/*# sourceMappingURL=HeroVideo.css.map */

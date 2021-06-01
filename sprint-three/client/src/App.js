@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/main.css";
-import Header from "./components/Header"
+import Header from "./components/Header/Header"
 import HomePage from "./pages/HomePage/HomePage";
 import UploadPage from "./pages/UploadPage/UploadPage";
 import history from "./components/Utility/history";

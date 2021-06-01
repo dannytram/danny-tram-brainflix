@@ -1,6 +1,7 @@
 import React from 'react'
-import views from '../assets/images/Icon-views.svg'
-import likes from '../assets/images/Icon-likes.svg'
+import views from '../../assets/images/Icon-views.svg'
+import likes from '../../assets/images/Icon-likes.svg'
+import "./HeroAbout.scss"
 
 function HeroAbout(props) {
     return (

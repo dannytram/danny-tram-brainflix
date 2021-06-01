@@ -1,0 +1,120 @@
+.commentsection {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1440px) {
+  .commentsection {
+    max-width: 60rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .commentsection {
+    padding-left: 5rem;
+  }
+}
+.commentsection__count {
+  font-family: "Avenir Demi";
+  opacity: 80%;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .commentsection__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+  }
+}
+.commentsection__add-comment {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .commentsection__add-comment {
+    justify-content: baseline;
+  }
+}
+.commentsection__profilepic {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+.commentsection__profileimg {
+  height: 4rem;
+  width: 5rem;
+}
+.commentsection__form {
+  font-family: "Avenir Demi";
+  padding-left: 2.5rem;
+}
+.commentsection__form-label {
+  font-family: "Avenir Demi";
+  font-size: 0.9rem;
+  color: #AFAFAF;
+  padding-bottom: 4rem;
+}
+.commentsection__text-area {
+  font-family: "Avenir Regular";
+  color: black;
+  font-size: 1.1rem;
+  height: 7rem;
+  width: 90%;
+  padding-bottom: 4.25rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #E1E1E1;
+  background-color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .commentsection__text-area {
+    max-height: 1rem;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .commentsection__text-area {
+    max-height: 2rem;
+    width: 35rem;
+  }
+}
+.commentsection__btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  padding-right: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .commentsection__btn-wrapper {
+    padding-left: 3rem;
+    padding-top: 2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .commentsection__btn-wrapper {
+    padding-left: 0rem;
+  }
+}
+.commentsection__btn {
+  font-family: "Avenir Regular";
+  font-size: 1rem;
+  font-weight: 500;
+  height: 3.5rem;
+  width: 17rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #0095FF;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .commentsection__btn {
+    width: 12rem;
+  }
+}/*# sourceMappingURL=CommentSection.css.map */

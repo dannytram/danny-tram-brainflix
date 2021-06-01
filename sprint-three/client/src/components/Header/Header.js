@@ -1,8 +1,8 @@
-import logo from '../assets/images/Logo-brainflix.svg'
-import profilepic from '../assets/images/Mohan-muruge.jpg'
-import upload from '../assets/images/Icon-upload.svg'
-import { Link } from "react-router-dom"
 import React from 'react'
+import logo from '../../assets/images/Logo-brainflix.svg'
+import profilepic from '../../assets/images/Mohan-muruge.jpg'
+import upload from '../../assets/images/Icon-upload.svg'
+import { Link } from "react-router-dom"
 
 class Header extends React.Component {
   render() {

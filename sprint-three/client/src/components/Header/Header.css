@@ -1,0 +1,135 @@
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .header__wrapper {
+    max-width: 1439px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__wrapper {
+    max-width: 1439px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0rem;
+  }
+}
+.header__logo {
+  width: 8rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__logo {
+    width: 15rem;
+    padding-left: 5rem;
+  }
+}
+.header__form {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .header__form {
+    margin-left: 8rem;
+    padding-top: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-left: 34rem;
+  }
+}
+.header__searchbar {
+  width: 100%;
+  height: 3.5rem;
+  background-image: url("../assets/images/Icon-search.svg");
+  background-position: 1rem 1rem;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  margin-bottom: 12px;
+  background-color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .header__searchbar {
+    width: 15rem;
+    height: 3.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__searchbar {
+    width: 20rem;
+    height: 3.5rem;
+  }
+}
+.header__navbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .header__navbar {
+    justify-content: baseline;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+.header__btn {
+  font-family: "Avenir Regular";
+  font-size: 1rem;
+  font-weight: 500;
+  height: 3.5rem;
+  margin-right: 1rem;
+  width: 17rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #0095FF;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .header__btn {
+    width: 8rem;
+  }
+}
+.header__btn-upload {
+  padding-right: 1rem;
+}
+.header__profilepic {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+}
+.header__profileimg {
+  height: 4rem;
+  width: 4rem;
+}/*# sourceMappingURL=Header.css.map */

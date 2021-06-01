@@ -1,5 +1,6 @@
 import React from "react";
-import VideoListVideo from "./VideoListVideo"
+import VideoListVideo from "../VideoListVideo"
+import "./VideoList.scss"
 
 
 function VideoList(props) {

@@ -1,3 +1,6 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
 .video-list{
     padding-top: 3rem;
     @include tablet{

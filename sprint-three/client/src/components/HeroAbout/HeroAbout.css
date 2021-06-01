@@ -1,0 +1,102 @@
+@media screen and (min-width: 1440px) {
+  .heroabout {
+    max-width: 60rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .heroabout {
+    padding-left: 5rem;
+  }
+}
+.heroabout__title {
+  font-family: "Avenir Bold";
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  opacity: 80%;
+}
+@media screen and (min-width: 768px) {
+  .heroabout__title {
+    font-size: 2.25rem;
+    padding-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .heroabout__about {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-right: 3rem;
+  }
+}
+.heroabout__info {
+  display: flex;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+.heroabout__channel {
+  font-family: "Avenir Bold";
+  opacity: 80%;
+}
+.heroabout__timestamp {
+  font-family: "Avenir Thin";
+  padding-left: 1rem;
+  color: #AFAFAF;
+}
+.heroabout__counters {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  padding-top: 1rem;
+}
+.heroabout__views-img {
+  min-width: 2.5rem;
+  padding-left: 1rem;
+}
+.heroabout__views-counter {
+  font-family: "Avenir Thin";
+  padding-left: 1rem;
+}
+.heroabout__likes-img {
+  min-width: 2.5rem;
+  padding-left: 1.25rem;
+}
+.heroabout__likes-counter {
+  font-family: "Avenir Thin";
+  padding-left: 1rem;
+}
+.heroabout__divider {
+  border-bottom: 2px solid #E1E1E1;
+  margin-left: 1rem;
+  padding-bottom: 2rem;
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .heroabout__divider {
+    border-bottom: 3px solid #E1E1E1;
+    width: 95%;
+    padding-bottom: 1rem;
+  }
+}
+.heroabout__description {
+  font-family: "Avenir Regular";
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  line-height: 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  .heroabout__description {
+    padding-right: 15rem;
+    line-height: 1.7rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .heroabout__description {
+    padding-right: 8rem;
+    padding-bottom: 2rem;
+    line-height: 1.5rem;
+  }
+}/*# sourceMappingURL=HeroAbout.css.map */

@@ -1,4 +1,5 @@
 import React from 'react'
+import "./HeroVideo.scss"
 
 function HeroVideo(props) {
   return (
